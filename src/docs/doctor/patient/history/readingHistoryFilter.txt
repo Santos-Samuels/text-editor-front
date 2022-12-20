@@ -1,0 +1,83 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3>Exibir por padrão as leituras das últimas 24 horas</h3>
+<p>
+  Dado que o médico ao acessar o histórico de leituras do paciente, sem a necessidade de 
+  aplicar nenhum filtro, o mesmo visualizará as leituras das últimas 24 horas do
+  paciente, caso tenha.
+</p>
+
+<h3>Permitir filtrar as leituras das últimas 24 horas</h3>
+<p>
+  Dado que o médico ao acessar o histórico de leituras do paciente, deseja visualizar as 
+  últimas leituras capturadas nas últimas 24 horas.
+</p>
+
+<h3>Permitir filtrar as leituras das últimas 48 horas</h3>
+<p>
+  Dado que o médico ao acessar o histórico de leituras do paciente, deseja visualizar as últimas
+  leituras capturadas do paciente nas últimas 24 horas.
+</p>
+
+<h3>Permitir filtrar as leituras das últimas 72 horas</h3>
+<p>
+  Dado que o médico ao acessar o histórico de leituras do paciente, deseja visualizar as últimas 
+  leituras capturadas do paciente nas últimas 72 horas.
+</p>
+
+<h3>Permitir filtrar as leituras da última semana</h3>
+<p>
+  Dado que o médico ao acessar o histórico de leituras do paciente, deseja visualizar as últimas 
+  leituras capturadas do paciente na última semana.
+</p>
+
+<h3>Permitir filtrar as leituras do último mês</h3>
+<p>
+  Dado que o médico ao acessar o histórico de leituras do paciente, deseja visualizar as últimas
+  leituras capturadas do paciente no último mês.
+</p>
+
+<h3>Exibir hora e risco do pack de leituras</h3>
+<p>
+  Dado que o médico aplicou o filtro do período de leituras, após carregar as leituras do período
+  selecionado é possível obter o maior risco entre todas as leituras do pack e o horário no 
+  qual essas leituras foram capturadas.
+</p>
+
+<h3>Exibir mensagem quando não encontrar leituras</h3>
+<p>
+  Dado que o médico aplicou o filtro do período de leituras, porém não foi capturado nenhuma leitura
+  do paciente selecionado neste período.
+</p>
+
+<h3>Exibir paginação quando houver mais que 6 registros de leituras</h3>
+<p>
+  Dado que o médico aplicou o filtro do período de leituras, sendo capturado mais de 6 registros leituras
+  neste período do paciente selecionado.
+</p>
+
+<h3>Não exibir paginação quando houver menos que 6 registros de leituras</h3>
+<p>
+  Dado que o médico aplicou o filtro do período de leituras, sendo capturado menos de 6 registros 
+  leituras neste período do paciente selecionado.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/history</span>
+<ul>
+  <li>
+    readingHistoryFilter.spec.cy.ts: contém todos os testes relacionados as ações de filtrar leituras 
+    capturadas de um paciente.
+  </li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    measurements.json: contém dados fakes para simular o retorno das requisições da consulta dos dados 
+    das leituras do paciente.
+  </li>
+</ul>

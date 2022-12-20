@@ -1,0 +1,82 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse/dashboard</li>
+</ul>
+
+<h3>Exibir todos os pacientes com leituras ao acessar a página</h3>
+<p>
+  Dado que o enfermeiro realizou autenticação no sistema sendo redirecionado para o dashboard.
+</p>
+
+<h3>Buscar todos os pacientes com leituras nas últimas 24 horas</h3>
+<p>
+  Dado que o enfermeiro deseja visualizar todos os pacientes que houve a coleta e envio das leituras
+  nas últimas 24 horas.
+</p>
+
+<h3>Buscar todos os pacientes com leituras nos últimos 15 dias</h3>
+<p>
+  Dado que o enfermeiro deseja visualizar todos os pacientes que houve a coleta e envio das leituras nos 
+  últimos 15 dias.
+</p>
+
+<h3>Buscar todos os pacientes com leituras nos últimos 30 dias</h3>
+<p>
+  Dado que o enfermeiro deseja visualizar todos os pacientes que houve a coleta e envio das leituras nos 
+  últimos 30 dias.
+</p>
+
+<h3>Buscar um paciente somente pelo nome</h3>
+<p>
+  Dado que existem muitos pacientes sendo exibidos com leituras, o enfermeiro deseja pesquisar um paciente 
+  específico, eliminando os demais pacientes da exibição.
+</p>
+
+<h3>Exibir mensagem quando não encontrar pacientes</h3>
+<p>
+  Dado que não foi encontrado nenhum paciente com leituras dentro dos últimos 30 dias ou houve um erro ao 
+  tentar obter os pacientes com leituras.
+</p>
+
+<h3>Exibir qual período o filtro está aplicado</h3>
+<p>
+  Dado que o enfermeiro realizou uma busca dentro do período de 24 horas, 15 dias ou 30 dias, ao fechar o filtro, 
+  é possível visualizar no topo da listagem qual período foi selecionado. 
+</p>
+
+<h3>Não exibir informações, quando não conseguir obter os dados das leituras</h3>
+<p>
+  Dado que o enfermeiro encontrou pacientes com leituras dentro do período aplicado, porém não é possível obter os
+  dados das leituras do paciente devido a algum erro no servidor ou o paciente possui somente um tipo de leitura,
+  exemplo: somente exames ECG.
+</p>
+
+<h3>Limpar o formulário de pesquisa</h3>
+<p>
+  Dado que o enfermeiro inseriu uma informação incorreta no filtro e deseja corrigi-lá, ou remover o filtro aplicado.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse/patinet/forms</span>
+<ul>
+  <li>
+    dashboardFilterPatient.spec.cy.ts: contém todos os testes relacionados as ações de filtrar pacientes com 
+    leituras na dashboard no fluxo do enfermeiro.
+  </li>
+</ul>
+<span>cypress/fixtures/nurse</span>
+<ul>
+  <li>
+    patients.json: contém dados fakes para simular o retorno das requisições da consulta dos dados dos 
+    pacientes com leituras.
+  </li>
+  <li>
+    patientECG.json: contém dados fakes para simular o retorno das requisições da consulta dos dados 
+    dos exames ECG de um determinado paciente.
+  </li>
+  <li>
+    patientMeasurements.json: contém dados fakes para simular o retorno das requisições da consulta 
+    dos dados de medições de um determinado paciente.
+  </li>
+</ul>

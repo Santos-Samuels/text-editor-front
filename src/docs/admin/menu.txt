@@ -1,0 +1,33 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/dashboard</li>
+</ul>
+
+<h3>Deverá possibilitar abrir e fechar o menu de navegação</h3>
+<p>
+  Dado que o administrador deseja abrir o menu para navegar entre as páginas através 
+  ou fechar o mesmo para ter uma melhor visualização da página.
+</p>
+
+<h3>Deverá vizualizar as opções do menu de navegação</h3>
+<p>
+  Dado que o administrador abriu o menu e deseja visualizar as opções que nele constam para navegar entre as páginas, 
+  sendo as opções: perfil, dashboard, médicos, enfermeiros, adicionar médico, adicionar enfermeiro e sair.
+</p>
+
+<h3>Deverá alternar entre as páginas disponíveis no menu de navegação</h3>
+<p>
+  Dado que o administrador deseja navegar entre as páginas após selecionar um item no menu.
+</p>
+
+<h3>Deverá abrir o perfil do usuário autenticado</h3>
+<p>
+  Dado que o administrador deseja abrir seu perfil de usuário clicando em sua imagem exibida no menu quando aberto.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin</span>
+<ul>
+  <li>menu.spec.cy.ts: contém todos os testes relacionados as ações do menu no fluxo administrativo.</li>
+</ul>

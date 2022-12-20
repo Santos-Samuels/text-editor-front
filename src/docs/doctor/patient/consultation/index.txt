@@ -1,0 +1,33 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="consultation-show" class="title">VISUALIZAR</h3>
+<h3>Deve listar as consultas do paciente</h3>
+<p>
+  Dado que existem consultas criadas para um paciente, ao acessar a aba de histórico de 
+  consulta do paciente, estas consultas devem ser listadas.
+</p>
+
+<h3>Deve exibir as informações detalhadas de uma consulta do paciente</h3>
+<p>
+  Dado que existem consultas criadas para um paciente, ao clicar em uma consulta o sistema
+  deve exibir suas informações detalhadas.izar está ação ocorre um erro na requisição. 
+  Exibindo uma mensagem informando o erro. 
+</p>
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/consultation</span>
+<ul>
+  <li>show.spec.cy.ts: contém os testes de listar e visualizar notificações.</li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    appointment.json: contém os dados fakes para simular o retorno das requisições 
+    aos endpoints de listar as consultas do paciente.
+  </li>
+</ul>

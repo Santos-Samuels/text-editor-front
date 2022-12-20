@@ -1,0 +1,66 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/profile</li>
+</ul>
+
+<h3>Exibir as informações do administrador no inicio da página ao lado da imagem de perfil</h3>
+<p>
+  Dado que o administrador deseja editar suas informações pessoais o nome, idade, gênero, email e endereço devem estarem
+  visíveis no topo da página ao lado da imagem de perfil.
+</p>
+
+<h3>
+  Atualizar o formulário com as informações do administrador preenchendo automaticamente todos os campos que 
+  possuam informações
+</h3>
+<p>
+  Dado que o administrador deseja editar suas informações, ao acessar a página, o formulário deve ser preenchido automaticamente
+  com as informações já existentes. Permitindo que o administrador edite somente as informações necessárias.
+</p>
+
+<h3>Exibir campos obrigatórios do formulário</h3>
+<p>
+  Dado que o administrador tentou enviar o formulário sem ter preenchidos todas as informações requeridas.
+</p>
+
+<h3>Exibir campos com informações inseridas de forma errada no formulário</h3>
+<p>
+  Dado que o administrador, por exemplo, informou dados incorretos no formulário e tentou salva-los.
+</p>
+
+<h3>Desabilitar os campos de endereço até que seja informado um CEP válido</h3>
+<p>
+  Dado que o administrador não inseriu o CEP ou inseriu de forma incorreta, então os campos de rua, número, cidade, estado, bairro 
+  e complemento não podem ser modificados, por fato das informações serem atualizadas automaticamente após 
+  inserir um CEP válido.
+</p>
+
+<h3>Deve preencher o endereço do administrador automaticamente após informar um CEP válido</h3>
+<p>
+  Dado que o administrador informou o CEP corretamente, então os campos de rua, cidade, estado e bairro devem ser preenchidos 
+  automaticamente, além de liberar esses campos para serem editados.
+</p>
+
+<h3>Exibir uma mensagem de aviso quando não for possível editar as informações do administrador</h3>
+<p>
+  Dado que as informações registradas do administrador no sistema estão incorretas ou são muito antigas, e o administrador 
+  deseja inserir as informações corretas e atualizadas, porém esta ação não é realizada com exito por falha na solicitação.
+</p>
+
+<h3>Realizar a edição das informações do administrador</h3>
+<p>
+  Dado que as informações registradas do administrador no sistema estão incorretas ou são muito antigas, e o administrador deseja 
+  inserir as informações corretas e atualizadas.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin</span>
+<ul>
+  <li>editAdmin.spec.cy.ts: contém todos os testes relacionados as ações de editar as informações do administrador no sistema.</li>
+</ul>
+<span>cypress/fixtures/admin/forms</span>
+<ul>
+  <li>adminInfo.json: contém dados fakes para simular o retorno dos dados do administrador.</li>
+  <li>adminAddress.json: contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>

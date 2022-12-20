@@ -1,0 +1,69 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients</li>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="association-show" class="title">VISUALIZAR</h3>
+<h3>Redirecionar o médico para a página de erro ao tentar acessar um paciente via URL que não  foi cadastrado no sistema</h3>
+<p>
+  Dado que o médico após realizar autenticação no sistema, tentou acessar as informações de um paciente, editando 
+  a URL com um id (exemplo: /doctor/patients/12345), porém o id informado não pertence a nenhum paciente 
+  cadastrado no sistema.
+</p>
+
+<h3>Redirecionar o médico para a página de erro ao tentar acessar um paciente via URL que não está associado a ele</h3>
+<p>
+  Dado que o médico após realizar autenticação no sistema, tentou acessar as informações de um paciente, editando 
+  a URL com um id (exemplo: /doctor/patients/12345), porém o id do paciente informado não possui nenhuma associação
+  com o médico autenticado.
+</p>
+
+<h3>Exibir todos os médicos associados a um paciente</h3>
+<p>
+  Dado que o médico realizou autenticação no sistema e deseja visualizar as informações de um paciente, o mesmo 
+  poderá visualizar uma lista com todos os médicos associados a este paciente.
+</p>
+
+<h3 id="association-delete" class="title">DELETAR</h3>
+<h3>Realizar a remoção da associação entre o médico o paciente</h3>
+<p>
+  Dado que o médico não irá mais acompanhar um determinado paciente, e o mesmo deseja remover sua associação com
+  o paciente, seja na listagem dos pacientes associados a ele ou na página de informações do paciente. Exibindo uma
+  mensagem informando o sucesso desta ação. 
+</p>
+
+<h3>Exibir mensagem de erro, quando não for possível realizar a remoção da associação</h3>
+<p>
+  Dado que o médico não irá mais acompanhar um determinado paciente, e o mesmo deseja remover sua associação com o
+  paciente, seja na listagem dos pacientes associados a ele ou na página de informações do paciente, porém ao tentar
+  realizar está ação ocorre um erro na requisição. Exibindo uma mensagem informando o erro. 
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/association</span>
+<ul>
+  <li>
+    show.spec.cy.ts: contém todos os testes relacionados as ações de visualização das 
+    associações do paciente.
+  </li>
+  <li>
+    remove.spec.cy.ts: contém todos os testes relacionados as ações de remover a associação com o 
+    paciente no fluxo do médico.
+  </li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    associatedDoctors.json: contém dados fakes para simular o retorno das requisições a API de buscar os médicos 
+    associados a um paciente.
+  </li>
+  <li>
+    associatedPatients.json: contém dados fakes para simular o retorno das requisições a API de buscar os 
+    pacientes associados a um paciente.
+  </li>
+  <li>
+    patient.json: contém dados fakes para simular o retorno das requisições a API de buscar os dados do paciente.
+  </li>
+</ul>

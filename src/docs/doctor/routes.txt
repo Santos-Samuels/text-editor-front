@@ -1,0 +1,68 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor</li>
+</ul>
+
+<h3>Não deverá permitir um médico acessar as páginas dos fluxos administrativos e do enfermeiro</h3>
+<p>
+  Dado que um médico após realizar autenticação no seu fluxo correspondente, edite a URL do navegador
+  para redirecioná-lo para uma página de outro fluxo, seja administrativo ou do enfermeiro 
+  (por exemplo: /admin/dashboard ou /nurse/dashboard), porém ao tentar fazer isto, o médico é 
+  redirecionado para uma página de erro 403, com uma mensagem informando que o mesmo não poderá 
+  acessar esta parte do sistema.
+</p>
+
+<h3>Não deverá permitir um médico acessar o sistema quando não houver token salvo</h3>
+<p>
+  Dado que um médico realizou autenticação com sucesso no sistema, e após ter finalizado o seu uso, 
+  fechou a aba no navegador. Passado um tempo, o médico deseja acessar novamente o sistema, porém o 
+  token do usuário armazenado no LocalStorage do navegador se expirou, necessitando assim que o médico 
+  realize a autenticação novamente no sistema e redirecionando o mesmo para a página de erro 403 caso 
+  ele tente acessar alguma página via URL do navegador.
+</p>
+
+<h3>Não deverá permitir um médico acessar o sistema após ter encerrado a sessão</h3>
+<p>
+  Dado que um médico realizou autenticação com sucesso no sistema, e após ter finalizado o seu uso,
+  selecionou a opção “Sair” no menu. Passado um tempo, o médico deseja acessar novamente o sistema, 
+  porém não existe nenhum token válido armazenado no LocalStorage do navegador, necessitando assim 
+  que o médico realize a autenticação novamente no sistema e redirecionando o mesmo para a página 
+  de erro 403 caso ele tente acessar alguma página via URL do navegador.
+</p>
+
+<h3>Deverá redirecionar o médico ao tentar acessar uma página inexistente no sistema</h3>
+<p>
+  Dado que um médico realizou autenticação com sucesso no sistema, e alterou a URL do navegador para acessar
+  outra página do fluxo (exemplo: /doctor/add-nurse), porém essa página não é encontrada no sistema,
+  redirecionando assim, o médico para uma página de erro 404 com a mensagem informando a página é inexistente
+  e possibilitando que o mesmo volte para a página anterior.
+</p>
+
+<h3>Deverá redirecionar o médico ao tentar acessar um paciente inexistente no sistema</h3>
+<p>
+  Dado que um médico realizou autenticação com sucesso no sistema, e alterou a URL do navegador para acessar
+  a página de informações de um paciente, porém a identificação do paciente não é encontrada no sistema, 
+  redirecionando assim, o médico para uma página de erro 404 com a mensagem informando que este paciente
+  é inexistente e possibilitando que o mesmo volte para a página anterior.
+</p>
+
+<h3>Deverá redirecionar o médico ao tentar acessar um paciente não associado a ele</h3>
+<p>
+  Dado que um médico realizou autenticação com sucesso no sistema, e alterou a URL do navegador para acessar a 
+  página de informações de um paciente, porém o paciente não está associado ao médico autenticado, redirecionando
+  assim, o médico para uma página de erro 400 com a mensagem informando não haver associação com o médico e 
+  possibilitando que o mesmo volte para a página anterior.
+</p>
+
+<h3>Deverá redirecionar o médico para qualquer página pertencente ao fluxo, depois do mesmo se autenticar no sistema</h3>
+<p>
+  Dado que um médico realizou autenticação com sucesso no sistema, e o mesmo altere a URL do navegador para acessar outra 
+  página do fluxo, caso a página exista, o médico deverá ser redirecionado para esta página com êxito.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor</span>
+<ul>
+  <li>routes.spec.cy.ts: contém todos os testes relacionados as rotas no fluxo do médico.</li>
+</ul>

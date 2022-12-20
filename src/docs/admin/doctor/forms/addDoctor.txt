@@ -1,0 +1,62 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/add-doctor</li>
+</ul>
+
+<h3>Realizar o cadastro de um novo médico</h3>
+<p>
+  Dado que o administrador deseja cadastrar um novo médico no sistema, é necessário que todas as informações sejam preenchidas
+  corretamente e o formulário seja salvo.
+</p>
+
+<h3>Não realizar o cadastro de um médico com crm já cadastrado no sistema</h3>
+<p>
+  Dado que o administrador deseja cadastrar um médico, mas já existe outro médico cadastrado com o mesmo crm. Logo, o sistema não
+  deve salvar as informações do médico.
+</p>
+
+<h3>Não realizar o cadastro de um médico com e-mail já cadastrado no sistema</h3>
+<p>
+  Dado que o administrador deseja cadastrar um médico, mas já existe outro médico cadastrado com o mesmo e-mail. Logo, o sistema não
+  deve salvar as informações do médico.
+</p>
+
+<h3>Exibir uma mensagem de aviso, quando não for possível cadastrar o novo médico</h3>
+<p>
+  Dado que o administrador deseja cadastrar um novo médico no sistema, após preencher todas as informações corretamente e salvar 
+  o formulário, porém o servidor não concluiu esta ação com exito.
+</p>
+
+<h3>Não salvar médico com campos vazios e exibir campos obrigatórios do formulário</h3>
+<p>
+  Dado que o administrador tentou enviar o formulário sem ter preenchidos todas as informações requeridas.
+</p>
+
+<h3>Exibir campos com informações inseridas de forma errada no formulário</h3>
+<p>
+  Dado que o administrador, por exemplo, informou dados incorretos no formulário e tentou salvá-los.
+</p>
+
+<h3>Deve preencher o endereço do médico automaticamente após informar um CEP válido</h3>
+<p>
+  Dado que o administrador informou o CEP do médico corretamente, então os campos de rua, cidade, estado e bairro devem ser 
+  preenchidos automaticamente, além de liberar esses campos para serem editados ou preenchidos.
+</p>
+
+<h3>Desabilitar os campos de endereço até que seja informado um CEP válido</h3>
+<p>
+  Dado que o administrador não inseriu o CEP do endereço do médico ou inseriu de forma incorreta, então os campos de rua, número, cidade, 
+  estado, bairro e complemento não podem ser modificados, por fato das informações serem atualizadas automaticamente 
+  após inserir um CEP válido.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/doctors/forms</span>
+<ul>
+  <li>addDocotor.spec.cy.ts: contém todos os testes relacionados as ações de adicionar um médico no sistema.</li>
+</ul>
+<span>cypress/fixtures/admin/doctor</span>
+<ul>
+  <li>doctorAddress.json: contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>

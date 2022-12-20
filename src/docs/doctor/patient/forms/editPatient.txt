@@ -1,0 +1,76 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3>Não deve permitir editar o número de registro do paciente</h3>
+<p>
+  Dado que o número de registro de cada paciente deve ser único no sistema e que o enfermeiro deseja 
+  editar um paciente, o campo de número de registro deve ser só de visualização, impossibilitando 
+  que este valor possa ser modificado.
+</p>
+
+<h3>Manter campos de altura e peso vazio quando o paciente não possui essas informações</h3>
+<p>
+  Dado que o enfermeiro deseja editar um paciente e não foi informado durante o cadastro do mesmo, 
+  a sua altura e peso.
+</p>
+
+<h3>Realizar a edição das informações de um paciente cadastrado anteriormente</h3>
+<p>
+  Dado que as informações registradas do paciente no sistema são antigas, e o enfermeiro deseja inserir 
+  as informações atualizadas.
+</p>
+
+<h3>Exibir uma mensagem de aviso quando não for possível editar as informações do paciente</h3>
+<p>
+  Dado que as informações registradas do paciente no sistema são antigas, e o enfermeiro deseja inserir as
+  informações atualizadas, porém esta ação não é realizada com exito por falha na solicitação.
+</p>
+
+<h3>Deve preencher o endereço do paciente automaticamente após informar um CEP válido</h3>
+<p>
+  Dado que o administrador informou o CEP corretamente, então os campos de rua, cidade, estado e bairro 
+  devem ser preenchidos automaticamente, além de liberar esses campos para serem editados.
+</p>
+
+<h3>Exibir as informações do paciente selecionado no início da página</h3>
+<p>
+  Dado que o enfermeiro selecionou um determinado paciente para ser editado, as principais informações deste paciente, 
+  como: nome, registro, idade, sexo e endereço, devem estar visíveis no topo da página.
+</p>
+
+<h3>Atualizar o formulário com as informações do paciente</h3>
+<p>
+  Dado que o enfermeiro deseja editar um determinado paciente, ao acessar a página, o formulário deve ser preenchido 
+  automaticamente com as informações já existente do paciente. Permitindo que o enfermeiro edite somente as 
+  informações necessárias.
+</p>
+
+<h3>Exibir campos obrigatórios do formulário</h3>
+<p>
+  Dado que o enfermeiro tentou enviar o formulário sem ter preenchidos todas as informações requeridas.
+</p>
+
+<h3>Exibir campos com informações inseridas de forma errada no formulário</h3>
+<p>
+  Dado que o enfermeiro, por exemplo, informou o seguinte CPF do paciente “999.999” ao invés de “999.999.999-99” e 
+  tentou enviar o formulário.
+</p>
+
+<h3>Desabilitar os campos de endereço até que seja informado um CEP válido</h3>
+<p>
+  Dado que o administrador não inseriu o CEP ou inseriu de forma incorreta, então os campos de rua, número, 
+  cidade, estado, bairro e complemento não podem ser modificados, por fato das informações serem atualizadas
+  automaticamente após inserir um CEP válido. 
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/forms</span>
+<ul>
+  <li>
+    patient.json: contém dados fakes para simular o retorno das requisições da consulta 
+    dos dados do pacientes selecionado.
+  </li>
+</ul>

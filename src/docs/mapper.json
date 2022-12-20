@@ -1,0 +1,129 @@
+{
+    "data": [
+        {
+            "id": "e96ba5b2-ebf2-483f-b127-d1dead54d3bd",
+            "root": "admin/doctor",
+            "files": ["delete"]
+        },
+        {
+            "id": "49d46093-bc2d-4385-9a93-52ac887971e4",
+            "root": "admin/doctor/forms",
+            "files": ["addDoctor", "editDoctor", "editDoctorImageProfile", "filterDoctor"]
+        },
+        {
+            "id": "3c513b5e-7171-4ace-a98e-c1c45ea2c6eb",
+            "root": "admin/forms",
+            "files": ["editAdmin", "editAdminImageProfile", "login"]
+        },
+        {
+            "id": "ca32f12f-9f6d-453b-8ea7-44395b96fadf",
+            "root": "admin/nurse",
+            "files": ["delete"]
+        },
+        {
+            "id": "a228144e-5ab9-44b1-92e9-ba3dfb8cae04",
+            "root": "admin/nurse/forms",
+            "files": ["addNurse", "editNurse", "editNurseImageProfile", "filterNurse"]
+        },
+        {
+            "id": "fc99266a-d382-4c9e-b0ec-ea72bf9c5830",
+            "root": "admin",
+            "files": ["menu", "routes"]
+        },
+        {
+            "id": "11640b7e-4fec-40d0-915d-95922dad999b",
+            "root": "nurse/forms",
+            "files": ["login", "formRecoverPassword"]
+        },
+        {
+            "id": "e3c6ee9e-33f5-4fde-84eb-89097d06e2e3",
+            "root": "nurse/patient/association",
+            "files": ["index", "add", "show", "delete"]
+        },
+        {
+            "id": "b8713020-7a46-4f22-abdb-3346655d03d2",
+            "root": "nurse/patient/contact",
+            "files": ["index", "add", "edit", "show", "delete"]
+        },
+        {
+            "id": "614e407c-4521-4132-a63b-60315793f462",
+            "root": "nurse/patient/forms",
+            "files": ["addPatient", "editPatient", "filterPatient", "dashboardPatientFilter"]
+        },
+        {
+            "id": "d837f7c7-4120-4810-8c47-9d9a73fe5696",
+            "root": "nurse/patient/history",
+            "files": ["exportPatientHistory"]
+        },
+        {
+            "id": "666c45c4-3686-4a8b-bc58-f540e46a17f9",
+            "root": "nurse/patient/information",
+            "files": ["headerInfo"]
+        },
+        {
+            "id": "bfafe05c-b3ba-4dc2-9ad0-78cc7cf906b4",
+            "root": "nurse",
+            "files": ["menu", "routes"]
+        },
+        {
+            "id": "62cad692-4531-4e5d-b6ac-dda1cdf7ba5b",
+            "root": "doctor/forms",
+            "files": ["login", "formRecoverPassword", "editDoctorImageProfile"]
+        },
+        {
+            "id": "1b5ab8e4-ac88-48f8-89cd-45a7ed855ad6",
+            "root": "doctor/patient/alert",
+            "files": ["index", "add", "edit", "show", "delete"]
+        },
+        {
+            "id": "5c60b22b-ff63-4886-8bbd-523ba4eb82cd",
+            "root": "doctor/patient/association",
+            "files": ["index", "show", "delete"]
+        },
+        {
+            "id": "35c04604-87e0-44fb-9446-6d8f03bed15d",
+            "root": "doctor/patient/consultation",
+            "files": ["index", "show"]
+        },
+        {
+            "id": "c8ddae58-6f60-4dde-a3f1-72fb4e872561",
+            "root": "doctor/patient/contact",
+            "files": ["index", "add", "edit", "show", "delete"]
+        },
+        {
+            "id": "02ffe5a2-f20d-41b3-a2bc-580c7e0464f1",
+            "root": "doctor/patient/contact/sideContainer",
+            "files": ["index", "add", "edit", "show"]
+        },
+        {
+            "id": "617cbad1-1ad4-439a-9341-6c98168d44a4",
+            "root": "doctor/patient/disease",
+            "files": ["index", "add", "edit", "show", "delete"]
+        },
+        {
+            "id": "451f4036-2d7a-42a6-877f-9c6be92b3363",
+            "root": "doctor/patient/forms",
+            "files": ["editPatient", "filterPatient"]
+        },
+        {
+            "id": "69d7abb2-0c9d-4782-8d2c-7ed9d63a4c4a",
+            "root": "doctor/patient/history",
+            "files": ["exportPatientHistory", "readingHistoryFilter"]
+        },
+        {
+            "id": "446c9abb-f418-4460-9d14-6113677a7a34",
+            "root": "doctor/patient/information",
+            "files": ["headerInfo"]
+        },
+        {
+            "id": "79c599d6-4dc6-4d6e-8e6e-056f8c550d16",
+            "root": "doctor/patient/notification",
+            "files": ["index", "add", "edit", "show", "delete"]
+        },
+        {
+            "id": "08e4cec1-981f-4500-8040-2b8f377a81e2",
+            "root": "doctor",
+            "files": ["menu", "routes"]
+        }
+    ]
+}

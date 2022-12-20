@@ -1,0 +1,57 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse/add-patient</li>
+</ul>
+
+<h3>Realizar o cadastro de um novo paciente</h3>
+<p>
+  Dado que o enfermeiro deseja registrar um novo paciente ao sistema, necessitando preencher todas as 
+  informações corretamente e enviando o formulário.
+</p>
+
+<h3>Não realizar o cadastro de um paciente com número de registro já cadastrado no sistema</h3>
+<p>
+  Dado que o enfermeiro deseja registrar um paciente, porém já existe outro paciente cadastrado com o 
+  mesmo número de registro.
+</p>
+
+<h3>Deve preencher o endereço do paciente automaticamente após informar um CEP válido</h3>
+<p>
+  Dado que o administrador informou o CEP corretamente, então os campos de rua, cidade, estado e bairro 
+  devem ser preenchidos automaticamente, além de liberar esses campos para serem editados.
+</p>
+
+<h3>Exibir uma mensagem de aviso, quando não for possível cadastrar o novo paciente</h3>
+<p></p>
+  Dado que o enfermeiro deseja registrar um novo paciente ao sistema, após preencher todas as informações 
+  corretamente e enviar o formulário, porém o servidor não concluiu esta ação com exito.
+</p>
+
+<h3>Exibir campos obrigatórios do formulário</h3>
+<p>
+  Dado que o enfermeiro tentou enviar o formulário sem ter preenchidos todas as informações requeridas.
+</p>
+
+<h3>Exibir campos com informações inseridas de forma errada no formulário</h3>
+<p>
+  Dado que o enfermeiro, por exemplo, informou o seguinte CPF do paciente “999.999” ao invés de “999.999.999-99”
+  e tentou enviar o formulário.
+</p>
+
+<h3>Desabilitar os campos de endereço até que seja informado um CEP válido</h3>
+<p>
+  Dado que o administrador não inseriu o CEP ou inseriu de forma incorreta, então os campos de rua, número, 
+  cidade, estado, bairro e complemento não podem ser modificados, por fato das informações serem atualizadas
+  automaticamente após inserir um CEP válido.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse/patient/forms</span>
+<ul>
+  <li>formAddPatient.spec.cy.ts: contém todos os testes relacionados as ações de adicionar um paciente no sistema.</li>
+</ul>
+<span>cypress/fixtures/nurse</span>
+<ul>
+  <li>patientAddress.json: contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>

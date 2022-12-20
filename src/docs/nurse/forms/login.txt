@@ -1,0 +1,41 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse/login</li>
+</ul>
+
+<h3>Deve apresentar mensagens para os campos obrigatórios vazios</h3>
+<p>
+  Dado que o enfermeiro acessou a página de login, e tentou efetuar login sem preencher as informações 
+  necessários, o sistema deve mostrar uma mensagem de erro para cada campo vazio obrigatório.
+</p>
+
+<h3>Deve apresentar mensagens para o campo de senha vazio</h3>
+<p>
+  Dado que o médico acessou a página de login, inseriu o COREN, mas deixou o campo da senha vazia, o sistema deve 
+  informar que o campo de senha é obrigatório.
+</p>
+
+<h3>Deve apresentar mensagens para o campo do COREN vazio</h3>
+<p>
+  Dado que o enfermeiro acessou a página de login, inseriu a senha, mas deixou o campo do COREN vazio, o sistema 
+  deve informar que o campo do COREN é obrigatório.
+</p>
+
+<h3>Deve encontrar um erro ao tentar realizar login como enfermeiro</h3>
+<p>
+  Dado que o enfermeiro acessou a página de login, inseriu todas as informações corretamente, mas ocorreu um erro
+  na requisição.
+</p>
+
+<h3>Deve redirecionar o enfermeiro para a página de recuperação de senha</h3>
+<p>
+  Dado que o enfermeiro acessou a página de login e clicou no botão de “Esqueci minha senha”, o sistema deve 
+  redirecionar o enfermeiro para a página de recuperação de senha.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse/forms</span>
+<ul>
+  <li>login.spec.cy.ts: contém os testes relacionados ao login do enfermeiro no sistema.</li>
+</ul>

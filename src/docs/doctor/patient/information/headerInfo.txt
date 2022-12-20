@@ -1,0 +1,31 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3>Não deve exibir as informações do paciente quando a página está no topo</h3>
+<p>
+  Dado que o enfermeiro ao acessar a página do paciente, não moveu o conteúdo
+  presente na página.
+</p>
+
+<h3>Exibir as informações básicas do paciente quando a página é movida</h3>
+<p>
+  Dado que o enfermeiro ao acessar a página do paciente, moveu o conteúdo
+  presente na página. Possibilitando que o mesmo, sempre visualize o paciente no qual
+  os dados exibidos pertencem.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/information</span>
+<ul>
+  <li>headerInfo.spec.cy.ts: contém os testes do modal de informações do paciente.</li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    patients.json: contém os dados fakes para simular o retorno das requisições ao endpoint
+    para obter dados do paciente selecionado.
+  </li>
+</ul>

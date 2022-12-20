@@ -1,0 +1,40 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/doctors/[doctorId]</li>
+</ul>
+
+<h3>Realizar upload de imagem</h3>
+<p>
+  Dado que o perfil do médico não possui uma imagem de perfil ou está desatualizada e o administrador deseja adicionar ou alterar.
+</p>
+
+<h3>Troca de imagem de perfil de médico</h3>
+<p>
+  Dado que o perfil do médico não possui uma imagem de perfil ou está desatualizada e o administrador deseja realizar a adicionar
+  ou alterar. Sendo assim, o sistema deve exibir um símbolo de confirmação na imagem de perfil em caso de sucesso.
+</p>
+
+<h3>Exibir um símbolo de erro que a imagem de perfil do médico não foi atualizada</h3>
+<p>
+  Dado que o administrador deseja ser informado caso a imagem não possa ser adicionada ou atualizada por algum motivo, 
+  o sistema deve exibir um símbolo de erro na imagem de perfil.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/doctor/forms</span>
+<ul>
+  <li>
+    editDoctorImageProfile.spec.cy.ts: contém todos os testes relacionados as ações de editar uma imagem de perfil 
+    de um médico no sistema.
+  </li>
+</ul>
+<span>cypress/fixtures/admin/doctor</span>
+<ul>
+  <li>doctorInfo.json: contém dados fakes para simular o retorno dos dados do médico.</li>
+  <li>doctorAddress.json: Contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>
+<span>cypress/fixtures/images</span>
+<ul>
+  <li>cat.jpeg: imagem utilizada para realizar os testes de alteração de avatar.</li>
+</ul>

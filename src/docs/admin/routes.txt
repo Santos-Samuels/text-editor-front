@@ -1,0 +1,39 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin</li>
+</ul>
+
+<h3>Deverá permitir o administrador acessar a página de autenticação</h3>
+<p>
+  Dado que o administrador deseja acessar o sistema.
+</p>
+
+<h3>Deverá redirecionar o administrador ao tentar acessar um médico ou enfermeiro não cadastrado</h3>
+<p>
+  Dado que o administrador realizou autenticação com sucesso no sistema, e alterou a URL do navegador para acessar a página de informações 
+  de um médico ou enfermeiro, porém a identificação informada não é encontrada no sistema, redirecionando assim o administrador para uma 
+  página de erro 404 com a mensagem informando o usuário é inexistente.
+</p>
+
+<h3>Deverá redirecionar o administrador ao tentar acessar uma página inexistente</h3>
+<p>
+  Dado que o administrador alterou a URL do navegador para acessar outra página do fluxo,
+  porém essa página não é encontrada no sistema, redirecionado assim o administrador para uma página de erro 404 com a mensagem informando 
+  que a página é inexistente.
+</p>
+
+<h3>
+  Deverá redirecionar o administrador para qualquer página pertence ao fluxo, depois do mesmo
+  se autenticar no sistema
+</h3>
+<p>
+  Dado que um administrador realizou autenticação com sucesso no sistema, e o mesmo altere a URL do navegador para 
+  acessar outra página do fluxo, caso a página exista, o administrador deverá ser redirecionado para esta página com êxito.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin</span>
+<ul>
+  <li>routes.spec.cy.ts: contém todos os testes relacionados as rotas no fluxo administrativo.</li>
+</ul>

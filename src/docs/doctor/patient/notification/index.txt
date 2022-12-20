@@ -1,0 +1,84 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="notification-add" class="title">ADICIONAR<h3>
+<h3>Realizar a criação de uma nova notificação</h3>
+<p>
+  Dado que o médico está associado ao paciente, acessa a página do paciente e preenche
+  o formulário corretamente para adicionar uma notificação para o mesmo, ao clicar em
+  salvar, a notificação deve ser adicionada com sucesso.
+</p>
+
+<h3>Erro ao tentar adicionar de uma nova notificação</h3>
+<p>
+  Dado que o médico está associado ao paciente, acessa a página do paciente e preenche
+  o formulário corretamente para adicionar uma notificação para o mesmo, ao clicar em 
+  salvar, o sistema deve retornar um erro no servidor.
+</p>
+
+<h3>Informar ao médico quando as informações do formulário de notificação não foram preenchidas</h3>
+<p>
+  Dado que o médico tentou adicionar uma notificação, porém não informou todos os campos 
+  obrigatórios, o sistema deverá mostrar uma mensagem para cada campo vazio solicitando
+  o preenchimento do mesmo.
+</p>
+
+<h3 id="notification-edit" class="title">EDITAR</h3>
+<h3>Realizar a edição de uma notificação cadastrada</h3>
+<p>
+  Dado que existem notificações criadas para um paciente, ao clicar no botão de “editar” o sistema deve 
+  apresentar um formulário preenchido com as informações anteriores da notificação selecionada, e deve 
+  permitir modificar e salvar as alteração com sucesso.
+</p>
+
+<h3>Erro ao tentar a edição de uma notificação cadastrada</h3>
+<p>
+  Dado que existem notificações criadas para um paciente, ao clicar no botão de “editar” o sistema deve 
+  apresentar um formulário preenchido com as informações anteriores da notificação selecionada, o sistema 
+  deve retornar um erro no servidor.
+</p>
+
+<h3 id="notification-show" class="title">VISUALIZAR</h3>
+<h3>Deve listar as notificações do paciente</h3>
+<p>
+  Dado que existem notificações criadas para um paciente, ao acessar a aba de notificações do
+  paciente, estas notificações devem ser listadas.
+</p>
+
+<h3>Deve exibir as informações detalhadas de uma notificações do paciente</h3>
+<p>
+  Dado que existem notificações criadas para um paciente, ao clicar no botão  “visualizar“ o 
+  sistema deve exibir as informações da notificação selecionada.
+</p>
+
+<h3 id="notification-delete" class="title">DELETAR</h3>
+<h3>Deve excluir uma notificação do paciente com sucesso</h3>
+<p>
+  Dado que existem notificações criadas para um paciente, ao clicar no botão de “excluir” o
+  sistema deve excluir a notificação selecionada do paciente.
+</p>
+
+<h3>Deve encontrar um erro ao excluir uma notificação do paciente</h3>
+<p>
+  Dado que existem notificações criadas para um paciente, ao clicar no botão de “excluir” o
+  sistema tentar excluir a notificação, mas ocorreu um erro na requisição.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/notification</span>
+<ul>
+  <li>add.spec.cy.ts: contém os testes de adicionar uma nova notificação.</li>
+  <li>edit.spec.cy.ts: contém os testes de editar uma notificação.</li>
+  <li>show.spec.cy.ts: contém os testes de listar e visualizar notificações.</li>
+  <li>delete.spec.cy.ts: contém os testes de remover uma notificação.</li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    notification.json: contém os dados fakes para simular o retorno das requisições aos endpoints 
+    de listar as notificações do paciente.
+  </li>
+</ul>

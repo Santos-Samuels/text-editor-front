@@ -1,0 +1,92 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse/patients/[patientId]</li>
+</ul>
+
+<h3 id="association-add" class="title">ADICIONAR<h3>
+<h3>Realizar a busca de um médico pelo nome e associar ao paciente</h3>
+<p>
+  Dado que o enfermeiro deseja associar um médico ao paciente, quando ainda não houver associação entre eles.
+</p>
+
+<h3>Exibir uma mensagem de alerta, quando não for possível associar um médico ao paciente</h3>
+<p>
+  Dado que o enfermeiro deseja associar um médico ao paciente, porém esta ação não é realizada com 
+  êxito por falha na solicitação.
+</p>
+
+<h3>Não permitir associar um médico que já está associado ao paciente</h3>
+<p>
+  Dado que o enfermeiro deseja associar um médico ao paciente, porém o mesmo médico já foi associado 
+  ao paciente anteriormente.
+</p>
+
+<h3 id="association-show" class="title">VISUALIZAR</h3>
+<h3>Exibir todos os médicos associados ao paciente</h3>
+<p>
+  Dado que o enfermeiro acessou a página de associações do paciente, ele poderá visualizar todos os médicos 
+  associados aquele paciente.
+</p>
+
+<h3>Exibir uma mensagem de aviso quando não houver nenhum médico associado ao paciente</h3>
+<p>
+  Dado que o enfermeiro acessou a página de associações e não encontrou nenhum médico na lista de associações 
+  do paciente.
+</p>
+
+<h3>Exibir uma mensagem quando não for encontrado nenhum médico na pesquisa do filtro</h3>
+<p>
+  Dado que o enfermeiro realizou a busca por médico para associar ao paciente, porém este 
+  médico não está cadastrado no sistema.
+</p>
+
+<h3>Exibir paginação quando houver mais de 10 médicos na pesquisa do filtro</h3>
+<p>
+  Dado que o enfermeiro realizou a busca por médico para associar ao paciente e existem vários 
+  médicos com o nome similar.
+</p>
+
+<h3>Não exibir paginação quando houver menos que 10 médicos na pesquisa do filtro</h3>
+<p>
+  Dado que o enfermeiro realizou a busca por médico para associar ao paciente e poucos médicos foram encontrados.
+</p>
+
+<h3>Limpar as informações do filtro de médico quando solicitado</h3>
+<p>
+  Dado que o enfermeiro já realizou a busca por um médico e deseja remover os dados exibidos.
+</p>
+
+<h3 id="association-delete" class="title">DELETAR</h3>
+<h3>Realizar a remoção da associação entre o médico o paciente</h3>
+<p>
+  Dado que um médico não irá mais acompanhar um determinado paciente, e o enfermeiro deseja remover a associação com o paciente.
+  Exibindo uma mensagem informando o sucesso desta ação. 
+</p>
+
+<h3>Exibir mensagem de erro, quando não for possível realizar a remoção da associação</h3>
+<p>
+  Dado que um médico não irá mais acompanhar um determinado paciente, e o enfermeiro deseja remover a associação com o paciente, 
+  porém ao tentar realizar está ação ocorre um erro na requisição. Exibindo uma mensagem informando o erro. 
+</p>
+
+<h3>Cancelar a operação de remover a associação</h3>
+<p>
+  Dado que o enfermeiro selecionou a opção de remover a associação com o paciente de forma equivoca, o mesmo poderá cancelar a 
+  ação sem enviar a requisição para a API.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse/patient/association</span>
+<ul>
+  <li>add.spec.cy.ts: contém os testes de adicionar uma nova associação ao paciente.</li>
+  <li>show.spec.cy.ts: contém os testes de visualizar as associações do paciente.</li>
+  <li>delete.spec.cy.ts: contém os testes de remover as associações do paciente.</li>
+</ul>
+<span>cypress/fixtures/nurse</span>
+<ul>
+  <li>
+    patientAssociation.json: contém os dados fakes para simular o retorno das requisições aos endpoints 
+    de listar os médicos associados a um paciente e de listar os médicos do sistema.
+  </li>
+</ul>

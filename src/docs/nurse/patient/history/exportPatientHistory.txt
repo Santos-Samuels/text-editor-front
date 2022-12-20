@@ -1,0 +1,53 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse/patients/[patientId]</li>
+</ul>
+
+<h3>Exportar o histórico de um paciente na dashboard</h3>
+<p>
+  Dado que o enfermeiro deseja obter uma planilha com o histórico de leituras de um determinado 
+  paciente, após realizar a autenticação, visualizar todos os pacientes com leituras nos últimos 
+  dias (24h até 30 dias) e selecionar um determinado paciente, após a exibição do modal com as 
+  informações do mesmo, ao selecionar o botão de exportação, é realizando o download do arquivo .csv com
+  as leituras e informações deste paciente, além da exibição da mensagem em caso de sucesso.
+</p>
+
+<h3>Exportar o histórico de um paciente na página de informações do paciente</h3>
+<p>
+  Dado que o enfermeiro deseja obter uma planilha com o histórico de leituras de um determinado
+  paciente, após acessar a página de informações deste paciente e selecionar o botão de exportação,
+  é realizado o download do arquivo .csv com as leituras e informações deste paciente, além da 
+  exibição da mensagem em caso de sucesso.
+</p>
+
+<h3>Exibir mensagem quando não for possível exportar o histórico do paciente na dashboard</h3>
+<p>
+  Dado que o enfermeiro deseja obter uma planilha com o histórico de leituras de um determinado paciente,
+  após realizar a autenticação, visualizar todos os pacientes com leituras nos últimos dias (24h até 30 dias) e selecionar um determinado paciente, após a exibição do modal com as informações do mesmo, ao selecionar o botão de exportação, não é possível obter o histórico do paciente por falha na requisição, com isso, não é realizando o download do arquivo .csv, além de exibir a mensagem que não foi possível completar esta ação.
+</p>
+
+<h3>Exibir mensagem quando não for possível exportar o histórico do paciente na página de informações do paciente</h3>
+<p>
+  Dado que o enfermeiro deseja obter uma planilha com o histórico de leituras de um determinado paciente, 
+  após acessar a página de informações deste paciente e selecionar o botão de exportação, não é possível obter 
+  o histórico do paciente por falha na requisição, com isso, não é realizando o download do arquivo .csv, 
+  além de exibir a mensagem que não foi possível completar esta ação
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse/patient/history</span>
+<ul>
+  <li>exportPatientHistory.spec.cy.ts: contém os testes de exportar o histórico do paciente.</li>
+</ul>
+<span>cypress/fixtures/nurse</span>
+<ul>
+  <li>
+    patients.json: contém os dados fakes para simular o retorno das requisições aos endpoints 
+    de listar os pacientes do sistema.
+  </li>
+  <li>
+    patientHistory.json: contém os dados fakes para simular o retorno das requisições aos endpoints 
+    de listar o histórico de leituras do paciente.
+  </li>
+</ul>

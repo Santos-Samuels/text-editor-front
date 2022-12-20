@@ -1,0 +1,64 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/nurses</li>
+</ul>
+
+<h3>Exibir lista dos enfermeiros</h3>
+<p>
+  Dado que o administrador acessou a página dos enfermeiros, ele poderá visualizar a lista de enfermeiros.
+</p>
+
+<h3>Filtrar enfermeiro pelo nome e exibir o enfermeiro pesquisado</h3>
+<P>
+  Dado que o administrador deseja buscar um enfermeiro pelo nome, ele poderá visualizar todos os enfermeiros que possuam o nome fornecido.
+</P>
+
+<h3>Exibir mensagem de enfermeiro não encontrado ao pesquisar por um nome não cadastrado</h3>
+<p>
+  Dado que o administrador deseja buscar um enfermeiro pelo nome, porém caso o nome esteja registrado ele verá uma mensagem
+  informando que o enfermeiro não foi encontrado.
+</p>
+
+<h3>Filtrar enfermeiro pelo coren e exibir o enfermeiro pesquisado</h3>
+<p>
+  Dado que o administrador deseja buscar um enfermeiro pelo coren, ele poderá visualizar todos os enfermeiros que possuam o coren fornecido.
+</p>
+
+<h3>Exibir mensagem de enfermeiro não encontrado ao pesquisar por um coren não cadastrado</h3>
+<p>
+  Dado que o administrador deseja buscar um enfermeiro pelo coren, porém caso o coren não esteja registrado ele verá uma mensagem 
+  informando que o enfermeiro não foi encontrado.
+</p>
+
+<h3>Limpar os filtros de busca</h3>
+<p>
+  Dado que o administrador já realizou a pesquisa e deseja limpar todos os filtros.
+</p>
+
+<h3>Botão de Paginação com mais de 10 enfermeiros</h3>
+<p>
+  Dado que o administrador já realizou a filtragem, e mais de 10 enfermeiros foram encontrados pelo filtro, um botão
+  de navegação (paginação deve aparecer).
+</p>
+
+<h3>Botão de Paginação oculto com menos de 10 enfermeiros</h3>
+<p>
+  Dado que o sistema retorne menos de 10 enfermeiros para o filtro informado pelo administrador, não será necessário que 
+  o botão de navegação (paginação) esteja visível, pois todos os enfermeiros podem ser listados em uma única página.
+</p>
+
+<h3>Modal de erro, quando o backend retornar um erro</h3>
+<p>
+  Dado que o backend retorne um erro, o sistema exibe um modal, uma vez que o administrador precisa ser informado sobre o ocorrido.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/nurse/forms</span>
+<ul>
+  <li>filterNurse.spec.cy.ts: contém todos os testes de relacionados a filtragem de enfermeiros.</li>
+</ul>
+<span>cypress/fixtures/admin/nurse</span>
+<ul>
+  <li>nurse.json: contém dados fakes para simular o retorno da requisição a API de buscar um enfermeiro.</li>
+</ul>

@@ -1,0 +1,40 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/nurses/[nurseId]</li>
+</ul>
+
+<h3>Realizar upload de imagem</h3>
+<p>
+  Dado que o perfil do enfermeiro não possui uma imagem de perfil ou está desatualizada e o administrador deseja realizar a alterar.
+</p>
+
+<h3>Troca de imagem de perfil de enfermeiro</h3>
+<p>
+  Dado que o perfil do enfermeiro não possui uma imagem de perfil ou está desatualizada e o administrador deseja realizar a alterar. 
+  Sendo assim, o sistema deve exibir um símbolo de confirmação na imagem de perfil em caso de sucesso.
+</p>
+
+<h3>Exibir um símbolo de erro que a imagemde perfil do enfermeiro não foi atualizada</h3>
+<p>
+  Dado que o administrador deseja ser informado se a imagem não pode ser atualizada por algum motivo, o sistema deve exibir um símbolo
+  de erro na imagemde perfil.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/nurse/forms</span>
+<ul>
+  <li>
+    editNurseImageProfile.spec.cy.ts: contém todos os testes relacionados as ações de editar uma imagem de perfil 
+    de um enfermeiro no sistema.
+  </li>
+</ul>
+<span>cypress/fixtures/admin/nurse</span>
+<ul>
+  <li>nurseInfo.json: contém dados fakes para simular o retorno dos dados do enfermeiro.</li>
+  <li>nurseAddress.json: contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>
+<span>cypress/fixtures/images</span>
+<ul>
+  <li>cat.jpeg: imagem utilizada para realizar os testes de alteração de avatar.</li>
+</ul>

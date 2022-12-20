@@ -1,0 +1,35 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3>Exportar o histórico de um paciente</h3>
+<p>
+  Dado que o médico deseja obter uma planilha com o histórico de leituras de um determinado 
+  paciente, após acessar a página de informações deste paciente e selecionar o botão de 
+  exportação, é realizado o download do arquivo .csv com as leituras e informações deste
+  paciente, além da exibição da mensagem em caso de sucesso.
+</p>
+
+<h3>Exibir mensagem quando não for possível exportar o histórico do paciente</h3>
+<p>
+  Dado que o médico deseja obter uma planilha com o histórico de leituras de um determinado
+  paciente, após acessar a página de informações deste paciente e selecionar o botão de 
+  exportação, não é possível obter o histórico do paciente por falha na requisição, com
+  isso, não é realizando o download do arquivo .csv, além de exibir a mensagem que não 
+  foi possível completar esta ação.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/history</span>
+<ul>
+  <li>exportPatientHistory.spec.cy.ts: contém os testes de exportar o histórico de um paciente.</li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    history.json: contém os dados fakes para simular o retorno das requisições do endpoint de listar 
+    o histórico do paciente.
+  </li>
+</ul>

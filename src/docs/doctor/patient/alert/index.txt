@@ -1,0 +1,99 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="alert-add" class="title">ADICIONAR</h3>
+<h3>Realizar a criação de um novo alerta</h3>
+<p>
+  Dado que o médico está associado ao paciente, acessa a página do paciente
+  e preenche o formulário corretamente para adicionar um alerta para o 
+  mesmo, ao clicar em salvar, o alerta deve ser adicionado com sucesso.
+</p>
+
+<h3>Erro ao tentar adicionar de um novo alerta</h3>
+<p>
+  Dado que o médico está associado ao paciente, acessa a página do paciente e preenche
+  o formulário corretamente para adicionar um alerta para o mesmo, ao clicar em salvar, o sistema
+  deve retornar um erro no servidor.  
+</p>
+
+<h3>Erro ao tentar adicionar um alerta existente</h3>
+<p>
+  Dado que o médico tentou adicionar um alerta com as mesmas características de um alerta 
+  existente, o sistema deve informar que já existe um alerta com as atuais configurações.
+</p>
+
+<h3>Sobrescrever um alerta existente no momento da criação</h3>
+<p>
+  Dado que o médico tentou adicionar um alerta com as mesmas características de um alerta 
+  existente, o sistema deve informar que já existe um alerta com as atuais configurações, o sistema
+  deve perguntar se o mesmo deseja sobrescrever o alerta encontrado, se sim, o alerta deve
+  ser sobrescrito com sucesso.
+</p>
+
+<h3>Erro ao tentar sobrescrever um alerta existente no momento da criação</h3>
+<p>
+  Dado que o médico tentou adicionar um alerta com as mesmas características de um alerta 
+  existente, o sistema deve informar que já existe um alerta com as atuais configurações, o sistema
+  deve perguntar se o mesmo deseja sobrescrever o alerta encontrado, se sim, o sistema deve 
+  tentar sobrescrever, mas encontrou um erro na requisição.
+</p>
+
+<h3>Informar ao médico quando as informações do formulário de alerta não foram preenchidas</h3>
+<p>
+  Dado que o médico tentou adicionar um alerta, porém não informou todos os campos obrigatórios, o sistema 
+  deverá mostrar uma mensagem para cada campo vazio solicitando o preenchimento do mesmo.
+</p>
+
+<h3 id="alert-edit" class="title">EDITAR</h3>
+<h3>Realizar a edição de um alerta cadastrado</h3>
+<p>
+  Dado que existem alertas criados para um paciente, ao clicar no botão de “editar” 
+  o sistema deve apresentar um formulário preenchido com as informações anteriores do 
+  alerta selecionado, e deve permitir modificar e salvar as alterações com sucesso.
+</p>
+
+<h3>Erro ao tentar editar um alerta cadastrado</h3>
+<p>
+  Dado que existem alertas criados para um paciente, ao clicar no botão de “editar” 
+  o sistema deve apresentar um formulário preenchido com as informações anteriores do 
+  alerta selecionado, o sistema deve retornar um erro no servidor.
+</p>
+
+<h3 id="alert-show" class="title">VISUALIZAR</h3>
+<h3>Deve listar os alertas do paciente</h3>
+<p>
+  Dado que existem alertas criados para um paciente, ao acessar a aba de 
+  alertas do paciente, estes devem ser listadas.
+</p>
+
+<h3 id="alert-delete" class="title">DELETAR</h3>
+<h3>Deve excluir um alerta do paciente com sucesso</h3>
+<p>
+  Dado que existem alertas criados para um paciente, ao clicar no botão de “excluir” 
+  o sistema deve excluir o alerta selecionado do paciente.
+</p>
+
+<h3>Deve encontrar um erro ao excluir um alerta do paciente</h3>
+<p>
+  Dado que existem alertas criados para um paciente, ao clicar no botão de “excluir” 
+  o sistema deve tentar excluir o alerta, mas ocorreu um erro na requisição.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/alert</span>
+<ul>
+  <li>add.spec.cy.ts: contém os testes de adicionar um novo alerta.</li>
+  <li>edit.spec.cy.ts: contém os testes de editar um alerta.</li>
+  <li>show.spec.cy.ts: contém os testes de listar alertas.</li>
+  <li>delete.spec.cy.ts: contém os testes de remover um alerta.</li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    alert.json: contém os dados fakes para simular o retorno das requisições aos 
+    endpoints de listar as alertas do paciente.
+  </li>
+</ul>

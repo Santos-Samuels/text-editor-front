@@ -1,0 +1,70 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/nurses/[nurseId]</li>
+</ul>
+
+<h3>Exibir as informações do enfermeiro selecionado no início da página</h3>
+<p>
+  Dado que o administrador selecionou um determinado enfermeiro para ser editado, as principais informações 
+  deste enfermeiro, como: nome, coren, idade, gênero, endereço e e-mail devem estar visíveis no topo da 
+  página ao lado da imagem de perfil.
+</p>
+
+<h3>Atualizar o formulário com as informações do enfermeiro preenchendo automaticamente todos os campos que possuam informações</h3>
+<p>
+  Dado que o administrador deseja editar um determinado enfermeiro, ao acessar a página, o formulário deve ser preenchido 
+  automaticamente com as informações já existentes. Permitindo que o administrador edite somente as informações necessárias.
+</p>
+
+<h3>Exibir campos obrigatórios do formulário</h3>
+<p>
+  Dado que o administrador tentou enviar o formulário sem ter preenchidos todas as informações requeridas.
+</p>
+
+<h3>Exibir campos com informações inseridas de forma errada no formulário</h3>
+<p>
+  Dado que o administrador, por exemplo, informou dados incorretos no formulário e tentou salvá-los.
+</p>
+
+<h3>Desabilitar os campos de endereço até que seja informado um CEP válido</h3>
+<p>
+  Dado que o administrador não inseriu o CEP do endereço do enfermeiro ou inseriu de forma incorreta, então os campos de rua, número, cidade, 
+  estado, bairro e complemento não podem ser modificados, por fato das informações serem atualizadas automaticamente 
+  após inserir um CEP válido.
+</p>
+
+<h3>Deve preencher o endereço do médico automaticamente após informar um CEP válido</h3>
+<p>
+  Dado que o administrador informou o CEP do enfermeiro corretamente, então os campos de rua, cidade, estado e bairro devem ser 
+  preenchidos automaticamente, além de liberar esses campos para serem editados ou preenchidos.
+</p>
+
+<h3>Não deve permitir editar o coren e e-mail do enfermeiro</h3>
+<p>
+  Dado que o coren e e-mail de cada enfermeiro deve ser único no sistema e que o administrador deseja editar um enfermeiro, 
+  esses campos devem servir somente para visualização, ou seja, os mesmos não poderão ser modificados.
+</p>
+
+<h3>Exibir uma mensagem de aviso quando não for possível editar as informações do enfermeiro</h3>
+<p>
+  Dado que as informações registradas do enfermeiro no sistema estão incorretas ou são muito antigas, e o administrador
+  deseja inserir as informações corretas e atualizadas, porém esta ação não é realizada com exito por falha na solicitação.
+</p>
+
+<h3>Realizar a edição das informações de um enfermeiro</h3>
+<p>
+  Dado que as informações registradas do enfermeiro no sistema estão incorretas ou são muito antigas, e o administrador
+  deseja inserir as informações corretas e atualizadas.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/nurse/forms</span>
+<ul>
+  <li>editNurse.spec.cy.ts: contém todos os testes relacionados as ações de editar um enfermeiro no sistema.</li>
+</ul>
+<span>cypress/fixtures/admin/nurse</span>
+<ul>
+  <li>nurseInfo.json: contém dados fakes para simular o retorno dos dados do enfermeiro.</li>
+  <li>nurseAddress.json: contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>

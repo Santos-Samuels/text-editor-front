@@ -1,0 +1,62 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/add-nurse</li>
+</ul>
+
+<h3>Realizar o cadastro de um novo enfermeiro</h3>
+<p>
+  Dado que o administrador deseja cadastrar um novo enfermeiro no sistema, é necessário que todas as informações sejam preenchidas 
+  corretamente e o formulário seja salvo.
+</p>
+
+<h3>Não realizar o cadastro de um enfermeiro com coren já cadastrado no sistema</h3>
+<p>
+  Dado que o administrador deseja cadastrar um enfermeiro, mas já existe outro enfermeiro cadastrado com o mesmo coren. 
+  Logo, o sistema não deve salvar as informações do enfermeiro.
+</p>
+
+<h3>Não realizar o cadastro de um enfermeiro com e-mail já cadastrado no sistema</h3>
+<p>
+  Dado que o administrador deseja cadastrar um enfermeiro, mas já existe outro enfermeiro cadastrado com o mesmo e-mail. Logo, o sistema
+  não deve salvar as informações do enfermeiro.
+</p>
+
+<h3>Exibir uma mensagem de aviso, quando não for possível cadastrar o novo enfermeiro</h3>
+<p>
+  Dado que o administrador deseja cadastrar um novo enfermeiro no sistema, após preencher todas as informações corretamente e salvar
+  o formulário, porém o servidor não concluiu esta ação com exito.
+</p>
+
+<h3>Não salvar enfermeiro com campos vazios e exibir campos obrigatórios do formulário</h3>
+<p>
+  Dado que o administrador tentou enviar o formulário sem ter preenchidos todas as informações requeridas.
+</p>
+
+<h3>Exibir campos com informações inseridas de forma errada no formulário</h3>
+<p>
+  Dado que o administrador, por exemplo, informou dados incorretos no formulário e tentou salvá-los.
+</p>
+
+<h3>Deve preencher o endereço do enfermeiro automaticamente após informar um CEP válido</h3>
+<p>
+  Dado que o administrador informou o CEP do enfermeiro corretamente, então os campos de rua, cidade, estado e bairro devem ser 
+  preenchidos automaticamente, além de liberar esses campos para serem editados ou preenchidos.
+</p>
+
+<h3>Desabilitar os campos de endereço até que seja informado um CEP válido</h3>
+<p>
+  Dado que o administrador não inseriu o CEP do endereço do enfermeiro ou inseriu de forma incorreta, então os campos de rua, número, cidade, 
+  estado, bairro e complemento não podem ser modificados, por fato das informações serem atualizadas automaticamente 
+  após inserir um CEP válido.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/nurse/forms</span>
+<ul>
+  <li>addNurse.spec.cy.ts: contém todos os testes relacionados as ações de adicionar um enfermeiro no sistema.</li>
+</ul>
+<span>cypress/fixtures/admin/nurse</span>
+<ul>
+  <li>nurseAddress.json: contém dados fakes para simular o retorno da requisição a API de buscar endereço por CEP.</li>
+</ul>

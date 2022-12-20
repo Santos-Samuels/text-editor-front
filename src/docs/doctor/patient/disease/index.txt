@@ -1,0 +1,88 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="disease-add" class="title">ADICIONAR<h3>
+<h3>Realizar a busca de uma doença pelo nome que não existe</h3>
+<p>
+  Dado que o médico deseja buscar uma doença pelo nome para relacioná-la ao 
+  paciente, e não existe um código cid para essa doença.
+</p>
+
+<h3>Realizar a busca de uma doença pelo nome que existe</h3>
+<p>
+  Dado que o médico deseja buscar uma doença pelo nome para relacioná-la ao
+  paciente, e existe um código cid para essa doença.
+</p>
+
+<h3>Realizar a busca de uma doença pelo nome e tentar relacioná-la ao paciente</h3>
+<p>
+  Dado que o médico deseja relacionar uma doença ao paciente, quando a doença 
+  existe e os campos obrigatórios estiverem vazios, deve-se encontrar mensagens 
+  informando quais campos obrigatórios estão vazios e devem ser preenchidos.
+</p>
+
+<h3>Realizar a busca de uma doença pelo nome e relacioná-la ao paciente com sucesso</h3>
+<p>
+  Dado que o médico deseja relacionar uma doença ao paciente, quando a doença existe e 
+  ainda não estiver relacionada ao paciente, e todos os campos foram preenchidos corretamente.
+</p>
+
+<h3>Realizar a busca de uma doença pelo nome e encontrar um erro ao relacioná-la ao paciente</h3>
+<p>
+  Dado que o médico deseja relacionar uma doença ao paciente, quando a doença existe e ainda 
+  não estiver relacionada ao paciente, e todos os campos foram preenchidos corretamente, mas 
+  ocorreu um erro na requisição.
+</p>
+
+<h3 id="disease-edit" class="title">EDITAR</h3>
+<h3>Deve editar as informações de uma doença relacionada ao paciente com sucesso</h3>
+<p>
+  Dado que existem doenças relacionadas ao paciente, ao clicar no botão de “editar” o sistema 
+  deve apresentar um formulário preenchido com as informações anteriores da doença vinculado 
+  ao paciente, e deve permitir salvar as alterações com sucesso.
+</p>
+
+<h3>Deve encontrar um erro ao editar as informações de uma doença relacionada ao paciente</h3>
+<p>
+  Dado que existem doenças relacionadas ao paciente, ao clicar no botão de “editar” o sistema
+  deve apresentar um formulário preenchido com as informações anteriores da doença vinculado ao
+  paciente, mas ocorreu um erro na requisição ao salvar as alterações.
+</p>
+
+<h3 id="disease-show" class="title">VISUALIZAR</h3>
+<h3>Deve listar as doenças relacionadas ao paciente</h3>
+<p>
+  Dado que existem doenças relacionadas ao paciente, ao acessar a aba de doenças 
+  relacionadas, estas doenças devem ser listadas.
+</p>
+
+<h3>Deve exibir as informações detalhadas de uma doença relacionada ao paciente</h3>
+<p>
+  Dado que existem doenças relacionadas ao paciente, ao clicar no botão  “visualizar“ o sistema
+  deve exibir as informações da doença selecionada do paciente.
+</p>
+
+<h3 id="disease-delete" class="title">DELETAR</h3>
+<h3>Deve desvincular uma doença de um paciente com sucesso</h3>
+<P>
+  Dado que existem doenças relacionadas ao paciente, ao clicar no botão de “excluir” o sistema 
+  deve desvincular a doença selecionada do paciente.
+</P>
+
+<h3>Deve encontrar um erro ao desvincular uma doença de um paciente</h3>
+<P>
+  Dado que existem doenças relacionadas ao paciente, ao clicar no botão de “excluir” o sistema
+  tentar desvincular a doença selecionada, mas ocorreu um erro na requisição.
+</P>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/disease</span>
+<ul>
+  <li>add.spec.cy.ts: contém os testes de relacionar uma nova doença ao paciente.</li>
+  <li>edit.spec.cy.ts: contém os testes de editar uma doença relacionada ao paciente.</li>
+  <li>show.spec.cy.ts: contém os testes de listar e visualizar doenças vinculadas ao paciente.</li>
+  <li>delete.spec.cy.ts: contém os testes de desvincular uma doença do paciente.</li>
+</ul>

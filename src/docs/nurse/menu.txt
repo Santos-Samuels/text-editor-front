@@ -1,0 +1,28 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse/dashboard</li>
+</ul>
+
+<h3>Deverá possibilitar abrir e fechar o menu de navegação</h3>
+<p>
+  Dado que o enfermeiro deseja abrir o menu para navegar entre as páginas através 
+  ou fechar o mesmo para ter uma melhor visualização da página.
+</p>
+
+<h3>Deverá visualizar as opções do menu de navegação</h3>
+<p>
+  Dado que o enfermeiro abriu o menu e deseja visualizar as opções que nele constam para navegar entre as páginas, 
+  sendo as opções: dashboard, pacientes, adicionar pacientes e sair.
+</p>
+
+<h3>Deverá alternar entre as páginas disponíveis no menu de navegação</h3>
+<p>
+  Dado que o enfermeiro deseja navegar entre as páginas selecionando uma opção do menu.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse</span>
+<ul>
+  <li>menu.spec.cy.ts: contém todos os testes relacionados as ações do menu no fluxo enfermeiro.</li>
+</ul>

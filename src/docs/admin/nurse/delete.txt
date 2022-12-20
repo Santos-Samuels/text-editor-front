@@ -1,0 +1,40 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/admin/nurses/[nurseId]</li>
+</ul>
+
+<h3>Excluir um enfermeiro do sistema</h3> 
+<p>
+  Dado que o administrador deseja remover um enfermeiro cadastrado no sistema anteriormente. Exibindo uma mensagem informando 
+  que está ação foi realizada com sucesso.
+</p>
+
+<h3>Exibir uma mensagem quando não for possível excluir o enfermeiro</h3>
+<p>
+  Dado que o administrador deseja remover um enfermeiro cadastrado no sistema anteriormente, porém está solicitação não é concluída 
+  com sucesso por um erro do servidor. Exibindo uma mensagem informando o problema.
+</p>
+
+<h3>Exibir informações no topo da página, do enfermeiro a ser excluído</h3>
+<p>
+  Dado que o administrador deseja remover um enfermeiro cadastrado no sistema anteriormente, é possível que o mesmo visualize qual 
+  enfermeiro está selecionado e preste a ser removido.
+</p>
+
+<h3>Permitir cancelar a exclusão</h3>
+<p>
+  Dado que o administrador ao visualizar as informações de um enfermeiro, clicou no botão de excluir sem querer, podendo cancelar 
+  está ação sem enviar requisição ao servidor.
+</p>
+
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/admin/nurse</span>
+<ul>
+  <li>delete.spec.cy.ts: contém todos os testes relacionados as ações deletar um enfermeiro do sistema.</li>
+</ul>
+<span>cypress/fixtures/admin/nurse</span>
+<ul>
+  <li>nurseInfo.json: contém dados fakes para simular o retorno das requisições da consulta dos dados do enfermeiro.</li>
+</ul>

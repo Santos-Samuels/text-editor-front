@@ -1,0 +1,70 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients</li>
+</ul>
+
+<h3>Exibir todos os pacientes quando nenhum filtro foi aplicado</h3>
+<p>
+  Dado que o médico acessou a página e não pesquisou por nenhum paciente, ou enviou o formulário 
+  sem informar os dados do paciente no qual ele está buscando.
+</p>
+
+<h3>Deverá pesquisar pacientes somente por nome, CPF ou número de registro</h3>
+<p>
+  Dado que o médico deseja realizar pesquisar um determinado paciente, porém ele só sabe uma única 
+  informação do paciente, seja o nome, CPF ou o número de registro.
+</p>
+
+<h3>Deverá pesquisar pacientes por múltiplos filtros</h3>
+<p>
+  Dado que o médico deseja realizar pesquisar um determinado paciente, e para não encontrar 
+  outros pacientes com informações semelhantes do paciente pesquisado, o mesmo poderá pesquisar 
+  com informações agrupadas, seja o nome, CPF ou número de registro.
+</p>
+
+<h3>Deverá limpar o filtro de pesquisa</h3>
+<p>
+  Dado que o médico inseriu uma informação incorreta no filtro e deseja corrigi-lá, ou 
+  remover o filtro aplicado.
+</p>
+
+<h3>Deverá acessar as informações do paciente pesquisado</h3>
+<p>
+  Dado que o médico deseja visualizar as informações detalhadas de um determinado paciente 
+  após pesquisar pelo mesmo e encontrá-lo.
+</p>
+
+<h3>Exibir mensagem quando não encontrar nenhum paciente</h3>
+<p>
+  Dado que o médico pesquisou por um determinado paciente, porém não foi encontrado nenhum 
+  paciente registrado no sistema com as informações inseridas.
+</p>
+
+<h3>Exibir paginação quando for encontrado mais de 10 pacientes</h3>
+<p>
+  Dado que o médico pesquisou por um paciente, porém foi encontrado mais de 10 pacientes com 
+  informações semelhantes, permitindo o médico alternar a listagem entre todos os pacientes encontrados.
+</p>
+
+<h3>Não exibir paginação quando não for encontrado menos de 10 pacientes</h3>
+<p>
+  Dado que o médico pesquisou por um paciente sendo encontrado menos de 10 pacientes com informações
+  semelhantes, no qual todos são exibidos na mesma lista.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/forms</span>
+<ul>
+  <li>
+    filterPatient.spec.cy.ts: contém todos os testes relacionados as ações de filtrar 
+    pacientes no fluxo do médico.
+  </li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    patientFilter.json: contém dados fakes para simular o retorno das requisições da consulta 
+    dos dados dos pacientes de forma filtrada.
+</li>
+</ul>

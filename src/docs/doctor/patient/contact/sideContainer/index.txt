@@ -1,0 +1,68 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="sideContainer-add" class="title">ADICIONAR</h3>
+<h3>Mostrar validações dos campos de edição</h3>
+<p>
+  Dado que o médico deseja atualizar as informações de contato do paciente diretamente pelo 
+  sideContainer, mas acaba não inserindo as informações corretamente.
+</p>
+
+<h3>Adicionar informações de contato</h3>
+<p>
+  Dado que o usuário não tenha nenhuma informação de contato e o médico deseja adicionar.
+</p>
+
+<h3 id="sideContainer-edit" class="title">EDITAR</h3>
+<h3>Editar uma informação de contato</h3>
+<p>
+  Dado que o paciente possua informações de contato e alguma esteja desatualizada 
+  ou errada, e o médico deseje editar essas informações.
+</p>
+
+<h3>Cancelar uma edição</h3>
+<p>
+  Dado que o administrador clicou sem querer no botão de editar e deseja fechar o card de edição de contatos.
+</p>
+
+<h3 id="sideContainer-show" class="title">VISUALIZAR</h3>
+<h3>Erro ao adicionar ou editar um contato</h3>
+<p>
+  Dado que o médico deseje adicionar ou editar um contato, informando todos 
+  os dados corretamente, mas ocorre um erro no servidor.
+</p>
+
+<h3>Exibir informações de contato</h3>
+<p>
+  Dado que o paciente possua informações de contato ou o médico acabou de adicionar, as informações devem 
+  estar visíveis no sideContainer de contatos.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/contact/sideContainer</span>
+<ul>
+  <li>
+    add.spec.cy.ts: contém todos os testes relacionados as ações de adicionar um contato do paciente 
+    pelo sideContainer no sistema.
+  </li>
+  <li>
+    edit.spec.cy.ts: contém todos os testes relacionados as ações de editar um contato do paciente
+    pelo sideContainer no sistema;
+  </li>
+  <li>
+    show.spec.cy.ts: contém todos os testes relacionados as ações de exibir alguma informação de 
+    contato do paciente no sideContainer do sistema.
+  </li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    contact.json: contém os dados fakes para simular o retorno das requisições do 
+    endpoint de listar os contatos do paciente.
+  </li>
+</ul>
+
+

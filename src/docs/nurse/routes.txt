@@ -1,0 +1,49 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/nurse</li>
+</ul>
+
+<h3>Não deverá permitir um enfermeiro acessar as páginas dos fluxos administrativos e de médico</h3>
+<p>
+  Dado que um enfermeiro após realizar autenticação no seu fluxo correspondente, edite a URL do navegador 
+  para redirecioná-lo para uma página de outro fluxo, seja administrativo ou médico (por exemplo: /admin/dashboard 
+  ou /doctor/dashboard), porém ao tentar fazer isto, o enfermeiro é redirecionado para uma página de erro 403, com
+  uma mensagem informando que o mesmo não poderá acessar esta parte do sistema.
+</p>
+
+<h3>Não deverá permitir um enfermeiro acessar o sistema quando não houver token salvo</h3>
+<p>
+  Dado que um enfermeiro realizou autenticação com sucesso no sistema, e após ter finalizado o seu uso, fechou a aba 
+  no navegador. Passado um tempo, o enfermeiro deseja acessar novamente o sistema, porém o token do usuário armazenado
+  no LocalStorage do navegador se expirou, necessitando assim que o enfermeiro realize a autenticação novamente no 
+  sistema e redirecionando o mesmo para a página de erro 403 caso ele tente acessar alguma página via URL do navegador.
+</p>
+
+<h3>Não deverá permitir um enfermeiro acessar o sistema após ter encerrado a sessão</h3>
+<p>
+  Dado que um enfermeiro realizou autenticação com sucesso no sistema, e após ter finalizado o seu uso, selecionou a 
+  opção “Sair” no menu. Passado um tempo, o enfermeiro deseja acessar novamente o sistema, porém não existe nenhum token 
+  válido armazenado no LocalStorage do navegador, necessitando assim que o enfermeiro realize a autenticação novamente no
+  sistema e redirecionando o mesmo para a página de erro 403 caso ele tente acessar alguma página via URL do navegador.
+</p>
+
+<h3>Deverá redirecionar o enfermeiro ao tentar acessar um paciente inexistente no sistema</h3>
+<p>
+  Dado que um enfermeiro realizou autenticação com sucesso no sistema, e alterou a URL do navegador para acessar outra página 
+  do fluxo, porém está página não existe no sistema (por exemplo: /nurse/add-doctor), redirecionando assim, o enfermeiro para
+  uma página de erro 404 com a mensagem informando que está página é inexistente e possibilitando que o mesmo volte 
+  para a página anterior.
+</p>
+
+<h3>Deverá redirecionar o enfermeiro para qualquer página pertencente ao fluxo, depois do mesmo se autenticar no sistema</h3>
+<p>
+  Dado que um enfermeiro realizou autenticação com sucesso no sistema, e o mesmo altere a URL do navegador para acessar 
+  outra página do fluxo, caso a página exista, o enfermeiro deverá ser redirecionado para esta página com êxito.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/nurse</span>
+<ul>
+  <li>routes.spec.cy.ts: contém todos os testes relacionados as rotas no fluxo enfermeiro.</li>
+</ul>

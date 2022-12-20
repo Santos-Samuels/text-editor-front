@@ -1,0 +1,117 @@
+<h3>FLUXO:</h3>
+<ul>
+  <li>/doctor/patients/[patientId]</li>
+</ul>
+
+<h3 id="contact-add" class="title">ADICIONAR</h3>
+<h3>Realizar o cadastro de um novo contato do próprio paciente</h3>
+<p>
+  Dado que o médico necessite cadastrar o contato do próprio paciente para quando 
+  for necessário entrar em contato diretamente com ele.
+</p>
+
+<h3>Realizar o cadastro de um novo contato de emergência</h3>
+<p>
+  Dado que o médico necessite cadastrar o contato de uma pessoa que possa responder 
+  pelo paciente em caso de emergência.
+</p>
+
+<h3>Realizar o cadastro de um novo contato com um tipo não definido</h3>
+<p>
+  Dado que o médico necessite cadastrar um contato relacionado ao paciente, no qual este 
+  contato não é do paciente e também não é de emergência, podendo ser considerado um 
+  contato qualquer.
+</p>
+
+<h3>Realizar o cadastro de um novo contato de e-mail</h3>
+<p>
+  Dado que o paciente possua um contato de e-mail, o médico poderá salvá-lo no sistema
+  para quando for necessário entrar em contato com este paciente.
+</p>
+
+<h3>Realizar o cadastro de um novo contato de telefone celular</h3>
+<p>
+  Dado que o paciente possua um contato de e-mail, o médico poderá salvá-lo no sistema 
+  para quando for necessário entrar em contato com este paciente.
+</p>
+
+<h3>Realizar o cadastro de um novo contato de telefone residencial</h3>
+<p>
+  Dado que o paciente possua um contato de telefone residencial, o médico poderá salvá-lo 
+  no sistema para quando for necessário entrar em contato com este paciente.
+</p>
+
+<h3>Exibir mensagens de avisos abaixo dos campos do formulário quando não forem preenchidos com valores válidos</h3>
+<p>
+  Dado que o médico tentou cadastrar um novo contato ou editar um existente, porém não inseriu 
+  todos os dados necessários ou inseriu de forma inválida, por exemplo, um e-mail 
+  incompleto @mail.com.br.
+</p>
+
+<h3>Limpar as informações inseridas no formulário quando solicitado</h3>
+<p>
+  Dado que o médico preencheu o formulário, porém deseja remover as informações inseridas no mesmo 
+  clicando no botão “Limpar”.
+</p>
+
+<h3 id="contact-edit" class="title">EDITAR</h3>
+<h3>Realizar a edição de um contato do paciente cadastrado anteriormente</h3>
+<p>
+  Dado que o médico cadastrou um contato do paciente anteriormente com informações erradas 
+  e o mesmo deseja corrigir.
+</p>
+
+<h3>Exibir uma mensagem de aviso quando não for possível editar um contato do paciente</h3>
+<p>
+  Dado que o médico cadastrou um contato do paciente anteriormente com informações erradas
+  e o mesmo deseja corrigir, porém, esta ação não é realizada com êxito por falha da solicitação.
+</p>
+
+<h3 id="contact-show" class="title">VISUALIZAR</h3>
+<h3>Deve listar os contatos de emergência do paciente</h3>
+<p>
+  Dado que existem contatos de emergência criados para um paciente, ao acessar a aba 
+  de contatos do paciente, estes devem ser todos os contatos de emergência do paciente.
+</p>
+
+<h3>Deve listar os contatos do paciente</h3>
+<p>
+  Dado que existem contatos  criados para um paciente, ao acessar a aba de contatos do 
+  paciente, estes devem ser todos os contatos do paciente.
+</p>
+
+<h3>Deve listar os contatos de “outros“ do paciente</h3>
+<p>
+  Dado que existem contatos de “outros“ criados para um paciente, ao acessar a aba de 
+  contatos do paciente, estes devem ser todos os contatos de “outros“ do paciente.
+</p>
+
+<h3 id="contact-delete" class="title">DELETAR</h3>
+<h3>Realizar a exclusão de um contato do paciente cadastrado anteriormente</h3>
+<p>
+  Dado que o paciente não possua mais um contato que foi cadastrado anteriormente, e o médico precisa 
+  remover o mesmo.
+</p>
+
+<h3>Exibir uma mensagem de aviso quando não for possível excluir um contato do paciente</h3>
+<p>
+  Dado que o paciente não possua mais um contato que foi cadastrado anteriormente, e o médico precisa 
+  remover o mesmo, porém esta ação não é realizada com êxito por falha na solicitação.
+</p>
+<hr/>
+
+<h3 class="title">ESTRUTURA DE ARQUIVOS</h3>
+<span>cypress/e2e/doctor/patient/contact</span>
+<ul>
+  <li>add.spec.cy.ts: contém os testes de adicionar um novo contato ao paciente.</li>
+  <li>edit.spec.cy.ts: contém os testes de edição de um contato do paciente.</li>
+  <li>show.spec.cy.ts: contém os testes de visualizar os contatos do paciente.</li>
+  <li>delete.spec.cy.ts: contém os testes de remoção de um contato do paciente.</li>
+</ul>
+<span>cypress/fixtures/doctor</span>
+<ul>
+  <li>
+    contact.json: contém os dados fakes para simular o retorno das requisições do 
+    endpoint de listar os contatos do paciente.
+  </li>
+</ul>
