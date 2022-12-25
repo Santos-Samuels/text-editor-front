@@ -1,21 +1,55 @@
-(function (_window, document) {
-    var container = document === null || document === void 0 ? void 0 : document.getElementById("first-list");
+
+
+(function (_window) {
+    var container = document.getElementById("first-list");
     var Ajax = new XMLHttpRequest();
-    var FILE_EXTENSION = ".spec.cy.ts";
+    //var FILE_EXTENSION = ".spec.cy.ts";
+    var FILE_EXTENSION = "";
     var pathsList = [];
-    function request() {
-        Ajax.open("GET", "./docs/mapper.json");
-        Ajax.send();
-        Ajax.addEventListener("readystatechange", function () {
-            if (Ajax.readyState === 4) {
-                var flows = JSON.parse(Ajax.responseText);
-                flows.data.forEach(function (element) {
-                    insertMenuItem(element === null || element === void 0 ? void 0 : element.root, element === null || element === void 0 ? void 0 : element.files);
-                });
-                checkItemsClicked();
-            }
-        });
+
+    //const socket = io("http://localhost:3000");
+    const socket2 = io("http://localhost:3000/namespace");
+
+    // socket.on("connect", () => {
+    //     console.log(`Conectado com id ${socket.id}`)
+    // })
+    
+    socket2.on("connect", () => {
+        console.log(`Conectado com id ${socket2.id}`)
+    })
+
+    socket2.on("send-folders", folders => {
+        console.log(folders)
+        initializeMenu(folders);
+    })
+
+    socket2.on("room-changed", content => {
+        document.getElementById("page-content").value = content;
+    })
+
+    socket2.on("receive-text-changed", (text) =>{
+        console.log(text)
+        document.getElementById("page-content").value = text;
+    })
+
+    document.getElementById("page-content").oninput = function() { onKeyPressed() }
+
+    function onKeyPressed(){
+        const text = document.getElementById("page-content").value;
+    
+        console.log(text)
+
+        socket2.emit("text-changed", text);
     }
+
+    function initializeMenu(folders) {
+        var flows = folders;
+        flows.forEach(function (element) {
+            insertMenuItem(element === null || element === void 0 ? void 0 : element.root, element === null || element === void 0 ? void 0 : element.files);
+        });
+        checkItemsClicked();
+    }
+
     var checkItemsClicked = function () {
         var ULs = document.querySelectorAll("ul");
         ULs.forEach(function (element) {
@@ -136,16 +170,11 @@
             getDoc(menuItem.id, 1, scrollId);
         }
     };
+
     var getDoc = function (path, fileIndex, divId) {
-        var xhttp = new XMLHttpRequest();
-        xhttp.open("GET", "docs/" + path + ".txt", true);
-        xhttp.send();
-        xhttp.onload = function () {
-            var file = this.responseText;
-            document.getElementById("page-content").innerHTML = file;
-            divId && scrollToId(divId, fileIndex);
-        };
+        socket2.emit("change-room", path);
     };
+
     var scrollToId = function (id, fileIndex) {
         if (fileIndex === 1) {
             window.scrollTo({ top: 0 });
@@ -153,8 +182,9 @@
         }
         document.getElementById(id).scrollIntoView();
     };
+
     var setHeaderFileName = function (fileName) {
         document.getElementById("current-file").innerHTML = fileName;
     };
-    request();
+    //request();
 })(window, document);

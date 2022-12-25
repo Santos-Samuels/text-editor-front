@@ -69,6 +69,17 @@ main {
   padding: 25px 50px;
 }
 
+#page-container textarea:first-child {
+  resize: none;
+  font-size: 18px;
+  background-color: var(--bg-color);
+  box-shadow: 0 4px 10px 6px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  min-height: 95%;
+  border-radius: 20px;
+  padding: 25px 50px;
+}
+
 #page-content {
   text-align: start;
 }
